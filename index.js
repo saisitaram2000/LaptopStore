@@ -11,7 +11,7 @@ const server=http.createServer((req,res) =>{
 
     const pathName=url.parse(req.url,true).pathname;
     const id=url.parse(req.url,true).query.id;
-    console.log(url.parse(req.url,true));
+   // console.log(url.parse(req.url,true));
 
     //PRODUCTS OVERVIEW
     if(pathName==='/products' || pathName==='/'){
@@ -22,7 +22,7 @@ const server=http.createServer((req,res) =>{
              
                 const cardsOutput = laptopData.map(el => replaceTemplate(data,el)).join('');
                 overviewOutput = overviewOutput.replace('{%CARDS%}', cardsOutput)
-                console.log(cardsOutput);
+               // console.log(cardsOutput);
                 res.end(overviewOutput);
             })
 
